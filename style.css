@@ -30,6 +30,7 @@ h1 {
   text-align: left;
 }
 h1 img {
+  height: 26px;
   margin-bottom: 30px;
   margin-left: -18px;
 }
@@ -58,11 +59,11 @@ p {
   max-width: 950px;
   height: auto;
 
-  -webkit-animation: fadein 0.3s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 0.3s; /* Firefox < 16 */
-   -ms-animation: fadein 0.3s; /* Internet Explorer */
-    -o-animation: fadein 0.3s; /* Opera < 12.1 */
-       animation: fadein 0.3s;
+  -webkit-animation: fadein 0.5s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 0.5s; /* Firefox < 16 */
+   -ms-animation: fadein 0.5s; /* Internet Explorer */
+    -o-animation: fadein 0.5s; /* Opera < 12.1 */
+       animation: fadein 0.5s;
 }
 #title-container {
   margin-left: 0;
@@ -112,7 +113,10 @@ p {
 
 /* Mobile */
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 800px),
+  only screen and (max-device-width: 800px) and (orientation: portrait),
+  only screen and (max-device-height: 927px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait),
+  only screen and (max-device-height: 897px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
   #wrapper {
     width: 100%;
     max-width: 100%;
@@ -127,7 +131,18 @@ p {
     justify-content: center;
     margin-right: 10%;
   }
+  h1 {
+    font-size: 6em;
+  }
+  h1 img {
+    height: 0.5em;
+    margin-bottom: 0.7em;
+    margin-left: -20px;
+  }
+  h3 {
+    font-size: 4em;
+  }
   p {
-    font-size: 1.5em;
+    font-size: 2.5em;
   }
 }
